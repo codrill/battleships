@@ -1,0 +1,29 @@
+language: node_js
+node_js:
+  - 10.15.0
+  - node
+dist: xenial
+sudo: required
+
+branches:
+  only:
+    - develop
+    - master
+
+cache:
+  directories:
+    - node_modules
+
+script:
+  - npm run test
+  - npm run build
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GH_TOKEN
+  local_dir: dist
+  target-branch: master
+  on:
+    branch: develop
+    node: 10.15.0
