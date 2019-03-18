@@ -5,6 +5,10 @@ node_js:
 dist: xenial
 sudo: required
 
+branches:
+  only:
+    - develop
+
 cache:
   directories:
     - node_modules
@@ -20,6 +24,4 @@ deploy:
   local_dir: build
   target-branch: master
   on:
-    branches:
-      only:
-      - develop
+    branch: develop
