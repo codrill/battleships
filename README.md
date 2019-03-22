@@ -1,2 +1,2 @@
 # battleships
-Battleships web game for retarded. 
+Battleships web game for retards. 
