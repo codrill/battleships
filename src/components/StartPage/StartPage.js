@@ -10,16 +10,17 @@ class StartPage extends Component {
 
   render() {
     return (
-      <div className="StartPage">
+      <div className="flex-wrapper">
         <header className="StartPageHeader">
           <h1>AWESOME BATTLESHIPS</h1>
         </header>
         <div className="welcomeForm">
           <form className="myForm">
-            <TextField autoComplete="false"
-              id="name"
-              label="Name"/>
-            <Button variant="contained" color="secondary" size="medium" className="startButton">
+            <TextField className="nameLabel"
+                       autoComplete="false"
+                       id="name"
+                       label="Name"/>
+            <Button variant="contained" color="secondary"  size="medium" className="jumpInButton">
               Jump IN
             </Button>
           </form>
