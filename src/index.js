@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './style/libs.sass'
-import './style/index.sass'
+import './styles/libs.sass'
+import './styles/index.sass'
 import App from './App'
 import * as serviceWorker from './serviceWorker'
 
