@@ -4,8 +4,22 @@ import TextField from '@material-ui/core/TextField'
 import './StartPage.sass'
 
 class StartPage extends Component {
-  startGame() {
 
+  constructor(props) {
+    super(props);
+    this.state = {value: ''};
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({value: event.target.value})
+  }
+
+  handleSubmit(event) {
+    console.log(this.state.value);
+    event.preventDefault();
   }
 
   render() {
@@ -15,15 +29,12 @@ class StartPage extends Component {
           <h1>AWESOME BATTLESHIPS</h1>
         </header>
         <div className="welcomeForm">
-          <form className="myForm">
             <TextField className="nameLabel"
-                       autoComplete="false"
-                       id="name"
-                       label="Name"/>
-            <Button variant="contained" color="secondary"  size="medium" className="jumpInButton">
+                       label="Name"
+                       onChange={this.handleChange}/>
+            <Button variant="contained" color="secondary"  size="medium" className="jumpInButton" onClick={this.handleSubmit}>
               Jump IN
             </Button>
-          </form>
         </div>
       </div>
     )
