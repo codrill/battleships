@@ -5,19 +5,19 @@ import './StartPage.sass'
 
 class StartPage extends Component {
 
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(event) {
-    this.userName = event.target.value
+    this.userName = event.target.value;
   }
 
   handleSubmit(event) {
-    console.log(this.userName);
+    this.props.onViewChange({changeView: true, userName: this.userName});
     event.preventDefault();
   }
 
@@ -28,12 +28,14 @@ class StartPage extends Component {
           <h1>AWESOME BATTLESHIPS</h1>
         </header>
         <div className="welcomeForm">
-            <TextField className="nameLabel"
-                       label="Name"
-                       onChange={this.handleChange}/>
-            <Button variant="contained" color="secondary"  size="medium" className="jumpInButton" onClick={this.handleSubmit}>
-              Jump IN
-            </Button>
+          <TextField
+            className="nameLabel"
+            label="Name"
+            onChange={this.handleChange}
+            variant="outlined"/>
+          <Button variant="contained" color="secondary"  size="medium" className="jumpInButton" onClick={this.handleSubmit}>
+            Jump IN
+          </Button>
         </div>
       </div>
     )
