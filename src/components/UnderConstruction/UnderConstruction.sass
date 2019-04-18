@@ -1,7 +1,30 @@
 @import "styles/base/vars"
 
-.underConstruction
-  color: $bs-white
+
+.under-construction
+  height: 100vh
+  width: 100vw
+  background-image: url("../../assets/images/bg-under-construction.jpg")
+  background-size: 100% auto
+  background-position: center
+  background-repeat: no-repeat
   background-color: $bs-black
+  color: $bs-white
   text-align: center
   text-transform: uppercase
+  text-shadow: 0 0 5px $bs-black
+  &__heading
+    font-size: 2rem
+    filter: blur(10px)
+    animation: animateHeading 3s ease-in-out infinite
+    @keyframes animateHeading
+      25%
+        font-size: 1.5rem
+        filter: none
+        transform: translateY(100px)
+      70%
+        font-size: 1.5rem
+        filter: none
+        transform: translateY(100px)
+      100%
+        font-size: 0
