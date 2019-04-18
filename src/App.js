@@ -5,14 +5,13 @@ import Dashboard from "./components/Dashboard/Dashboard";
 
 export default class App extends React.Component {
 
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
 
     this.state = {
       changeView: false,
       userName: '',
     };
-
   }
 
   onViewChange = ({changeView, userName}) => {
@@ -22,8 +21,7 @@ export default class App extends React.Component {
     })
   };
 
-
-  SwitchView(state) {
+  viewSwitch(state) {
     if (state.changeView) {
       return (<Dashboard userName={state.userName}/>)
     } else {
@@ -34,7 +32,7 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        {this.SwitchView(this.state)}
+        {this.viewSwitch(this.state)}
       </div>
     )
   }
