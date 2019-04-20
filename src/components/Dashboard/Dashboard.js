@@ -1,6 +1,5 @@
 import * as React from "react";
 
-
 class Dashboard extends React.Component {
 
   constructor(props) {
@@ -16,7 +15,6 @@ class Dashboard extends React.Component {
       <div>
         <h1>Hello {this.state.userName} </h1>
       </div>
-
     )
   }
 }

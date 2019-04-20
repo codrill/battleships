@@ -1,6 +1,5 @@
 import React from 'react'
 import './App.sass'
-import StartPage from './components/StartPage/StartPage'
 import Dashboard from "./components/Dashboard/Dashboard";
 
 export default class App extends React.Component {
