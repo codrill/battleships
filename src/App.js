@@ -1,11 +1,12 @@
-import React, { Component } from 'react'
-import UnderConstruction from './components/UnderConstruction/UnderConstruction'
+import React, {Component} from 'react'
 import './App.sass'
 
 export default class App extends Component {
-  render() {
-    return (
-      <div><UnderConstruction/></div>
-    )
-  }
+    render() {
+        return (
+            <div>
+                Hello
+            </div>
+        )
+    }
 }
