@@ -1,0 +1,21 @@
+.heading-animation
+  h2
+    opacity: 1
+    transform: translateY(0) scale(1, 1)
+    animation: animateHeading 3.8s ease-in-out
+    animation-fill-mode: backwards
+    animation-delay: 1s
+    @keyframes animateHeading
+      0%
+        opacity: 0
+        filter: blur(10px)
+        transform: translateY(-200px) scale(0, 0)
+      20%
+        opacity: 0
+        filter: blur(10px)
+        transform: translateY(-200px) scale(0, 0)
+      55%
+        opacity: 1
+        filter: none
+        transform: translateY(0) scale(1, 1)
+
