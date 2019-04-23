@@ -14,12 +14,10 @@ export default class HeadingAnimation extends React.Component {
   
   componentDidMount() {
     this.currentTextIndex = 0
-    this.changeText = setInterval(this.updateText.bind(this), 5000)
+    this.changeText = setInterval(this.updateText.bind(this), 4000)
   }
   
   updateText() {
-    // console.log('currentTextToAnimate index', this.state.animatedTexts.indexOf(this.state.currentTextToAnimate))
-    
     this.currentTextIndex++
   
     this.setState({
