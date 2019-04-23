@@ -1,0 +1,37 @@
+.heading-animation
+  h2
+    opacity: 1
+    width: 100vw
+    max-height: 100vh
+    overflow: hidden
+    font-size: inherit
+    transform: translateY(0)
+    animation: animateHeading 3s ease-in-out
+    animation-fill-mode: backwards
+    animation-delay: 1s
+    @keyframes animateHeading
+      0%
+        width: 0
+        max-height: 1.3em
+        opacity: 0
+        filter: blur(10px)
+        font-size: 0
+        transform: translateY(-200px)
+      10%
+        width: 0
+        max-height: 1.3em
+        opacity: 0
+        font-size: 0
+        transform: translateY(-200px)
+      50%
+        filter: blur(3px)
+      55%
+        width: 100vw
+        max-height: 1.3em
+        opacity: 1
+        filter: none
+        font-size: inherit
+        transform: translateY(0)
+      100%
+        font-size: inherit
+        max-height: 100vh
