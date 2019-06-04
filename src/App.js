@@ -1,12 +1,39 @@
-import React, {Component} from 'react'
+import React from 'react'
 import './App.sass'
+import Dashboard from "./components/Dashboard/Dashboard"
+import StartPage from "./components/StartPage/StartPage"
 
-export default class App extends Component {
-    render() {
-        return (
-            <div>
-                Hello
-            </div>
-        )
+export default class App extends React.Component {
+
+  constructor() {
+    super();
+
+    this.state = {
+      changeView: false,
+      userName: '',
+    };
+  }
+
+  onViewChange = ({changeView, userName}) => {
+    this.setState({
+      changeView: changeView,
+      userName: userName
+    })
+  };
+
+  viewSwitch(state) {
+    if (state.changeView) {
+      return (<Dashboard userName={state.userName}/>)
+    } else {
+      return (<StartPage onViewChange={this.onViewChange}/>)
     }
+  }
+
+  render() {
+    return (
+      <div>
+        {this.viewSwitch(this.state)}
+      </div>
+    )
+  }
 }

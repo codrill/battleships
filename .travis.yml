@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - 10.15.0
+  - 10.16.0
   - node
 dist: xenial
 sudo: required
@@ -8,10 +8,6 @@ sudo: required
 branches:
   only:
     - develop
-
-cache:
-  directories:
-    - node_modules
 
 script:
   - npm run test
