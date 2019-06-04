@@ -1,6 +1,7 @@
 import React from 'react'
 import './App.sass'
-import Dashboard from "./components/Dashboard/Dashboard";
+import Dashboard from "./components/Dashboard/Dashboard"
+import StartPage from "./components/StartPage/StartPage"
 
 export default class App extends React.Component {
 
